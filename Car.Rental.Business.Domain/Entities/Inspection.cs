@@ -1,12 +1,11 @@
-﻿using Car.Rental.Business.Domain.Entities.Auth;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Car.Rental.Business.Domain.Entities
 {
-    [Table("Inspection")]
+    [Table("Inspection", Schema = "business")]
     public class Inspection : Base
     {
         public int ReservationId { get; set; }
@@ -17,6 +16,6 @@ namespace Car.Rental.Business.Domain.Entities
         public bool HasDamages { get; set; }
 
         public virtual Reservation Reservation { get; set; }
-        public virtual Operator Operator { get; set; }
+        //public virtual Operator Operator { get; }
     }
 }

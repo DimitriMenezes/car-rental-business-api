@@ -38,14 +38,16 @@ namespace Car.Rental.BusinessAPI
             services.AddMvc().AddFluentValidation();
             services.AddCors();
 
-            services.AddDbContext<BusinessContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"),
+            var configuration = Configuration.GetConnectionString("DefaultConnection");
+            services.AddDbContext<BusinessContext>(options => options.UseSqlServer(configuration,
                 x => x.MigrationsHistoryTable("__EFMigrationsHistory", "business"))
                 .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole())));
-            services.AddDbContext<AuthContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            services.AddDbContext<VehicleContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            //services.AddDbContext<AuthContext>(options => options.UseSqlServer(configuration));
+            services.AddDbContext<VehicleContext>(options => options.UseSqlServer(configuration));
 
             services.AddScoped<DbContext, BusinessContext>();
-            services.AddScoped<DbContext, AuthContext>();
+            //services.AddScoped<DbContext, AuthContext>();
             services.AddScoped<DbContext, VehicleContext>();
 
             ApplicationInjector.RegisterServices(services);

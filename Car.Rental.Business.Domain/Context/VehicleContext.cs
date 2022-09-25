@@ -1,4 +1,4 @@
-﻿using Car.Rental.Business.Domain.Entities.Vehicle;
+﻿using Car.Rental.Business.Domain.Entities.Vehicles;
 using Microsoft.EntityFrameworkCore;
 
 namespace Car.Rental.Business.Domain.Context
@@ -10,7 +10,7 @@ namespace Car.Rental.Business.Domain.Context
         public VehicleContext()
         {
         }
-        public VehicleContext(DbContextOptions options) : base(options)
+        public VehicleContext(DbContextOptions<VehicleContext> options) : base(options)
         {
         }
 
@@ -19,7 +19,7 @@ namespace Car.Rental.Business.Domain.Context
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("vehicle");          
+            modelBuilder.HasDefaultSchema("vehicle");            
         }
     }
 }

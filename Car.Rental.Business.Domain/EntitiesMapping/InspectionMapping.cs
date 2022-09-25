@@ -12,8 +12,9 @@ namespace Car.Rental.Business.Domain.EntitiesMapping
         public void Configure(EntityTypeBuilder<Inspection> builder)
         {
             builder.HasKey(c => c.Id);
-            builder.HasOne(i => i.Operator)
-                .WithMany(i => i.Inspections);                
+            //builder.HasOne(i => i.Operator)
+            //    .WithMany(i => i.Inspections)
+            //    .HasForeignKey(i => i.OperatorId);
             builder.HasOne(i => i.Reservation);
         }
     }

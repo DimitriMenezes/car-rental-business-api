@@ -4,10 +4,10 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace Car.Rental.Business.Domain.Entities.Auth
-{    
-    public class Client : Base
-    {        
-        public string Cpf { get; set; }
-        public List<Reservation> Reservations { get; set; }
+{
+    [Table("User", Schema="auth")]
+    public class User : Base
+    {
+        public string Name { get; set; }
     }
 }

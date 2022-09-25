@@ -15,13 +15,15 @@ namespace Car.Rental.Business.Domain.EntitiesMapping
             builder.Property(i => i.TotalPrix)
                 .IsRequired(false);
 
-            builder.HasOne(i => i.Client)
-                .WithMany(i => i.Reservations)
-                .HasForeignKey(i => i.ClientId); 
+            //builder.HasOne(i => i.Client)
+            //    .WithMany(i => i.Reservations)
+            //    .HasForeignKey(i => i.ClientId); 
 
-            builder.HasOne(i => i.Vehicle)
-               .WithMany(i => i.Reservations)
-               .HasForeignKey(i => i.VehicleId);
+            //builder.HasOne(i => i.Vehicle)
+            //   .WithMany(i => i.Reservations)
+            //   .HasForeignKey(i => i.VehicleId);
+
+         
         }
     }
 }
