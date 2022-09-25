@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Car.Rental.Business.Domain.Entities
 {
-    [Table("Reservation", Schema= "business")]
+    [Table("Reservation", Schema = "business")]
     public class Reservation : Base
     {
         public int ClientId { get; set; }
@@ -13,7 +13,7 @@ namespace Car.Rental.Business.Domain.Entities
         public DateTime StartDate { get; set; }
         public DateTime? EndDate { get; set; }
         public decimal? TotalPrix { get; set; }
-        //public User Client { get; }
-        //public Vehicle Vehicle { get; }
+
+        public virtual Inspection Inspection { get; set; }
     }
 }
