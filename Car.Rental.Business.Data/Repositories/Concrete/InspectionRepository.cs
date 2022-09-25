@@ -1,4 +1,5 @@
 ﻿using Car.Rental.Business.Data.Repositories.Abstract;
+using Car.Rental.Business.Domain.Context;
 using Car.Rental.Business.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -9,7 +10,7 @@ namespace Car.Rental.Business.Data.Repositories.Concrete
 {
     public class InspectionRepository : BaseRepository<Inspection>, IInspectionRepository
     {
-        public InspectionRepository(DbContext context) : base(context)
+        public InspectionRepository(BusinessContext context) : base(context)
         {
         }
     }

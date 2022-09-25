@@ -11,7 +11,10 @@ namespace Car.Rental.Business.Services.Mapper
     {
         public ServicesMapperProfile()
         {
-            CreateMap<ReservationModel, Reservation>();
+            CreateMap<ReservationModel, Reservation>()
+                .ReverseMap();
+            CreateMap<InspectionModel, Inspection>()
+                .ReverseMap();
         }
     }
 }

@@ -21,6 +21,7 @@ namespace Car.Rental.Business.Services.IoC
             IMapper mapper = mappingConfig.CreateMapper();
             services.AddSingleton(mapper);
 
+            services.AddScoped<IInspectionService, InspectionService>();
             services.AddScoped<IRentalSimulationService, RentalSimulationService>();
             services.AddScoped<IReservationService, ReservationService>();
         }
