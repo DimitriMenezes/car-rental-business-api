@@ -21,7 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="FluentValidator\" />
     <Folder Include="Model\Request\" />
     <Folder Include="Model\Return\" />
   </ItemGroup>

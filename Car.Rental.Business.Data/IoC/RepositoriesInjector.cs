@@ -9,8 +9,9 @@ namespace Car.Rental.Business.Data.IoC
     {
         public static void RegisterServices(IServiceCollection services)
         {
-            services.AddScoped<IUserRepository, UserRepository>();
+            //services.AddScoped<IClientReadOnlyRepository, ClientReadOnlyRepository>();
             services.AddScoped<IVehicleReadOnlyRepository, VehicleReadOnlyRepository>();
+            services.AddScoped<IReservationRepository, ReservationRepository>();
         }
     }
 }

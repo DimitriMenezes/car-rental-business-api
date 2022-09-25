@@ -1,7 +1,6 @@
 ﻿using Car.Rental.Business.Data.Repositories.Abstract;
 using Car.Rental.Business.Services.Abstract;
 using Car.Rental.Business.Services.Model;
-//using Car.Rental.Vehicles.Management.Data.Repositories.Abstract;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;

@@ -12,8 +12,7 @@ namespace Car.Rental.Business.Services.IoC
     public static class ServicesInjector
     {
         public static void RegisterServices(IServiceCollection services)
-        {
-
+        {            
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new ServicesMapperProfile());
@@ -23,6 +22,7 @@ namespace Car.Rental.Business.Services.IoC
             services.AddSingleton(mapper);
 
             services.AddScoped<IRentalSimulationService, RentalSimulationService>();
+            services.AddScoped<IReservationService, ReservationService>();
         }
     }
 }

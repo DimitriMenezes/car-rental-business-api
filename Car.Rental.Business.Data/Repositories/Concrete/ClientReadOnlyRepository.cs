@@ -1,18 +1,18 @@
 ﻿using Car.Rental.Business.Data.Repositories.Abstract;
 using Car.Rental.Business.Domain.Context;
-using Car.Rental.Business.Domain.Entities.Vehicles;
+using Car.Rental.Business.Domain.Entities.Auth;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Car.Rental.Business.Data.Repositories.Concrete
 {
-    public class VehicleReadOnlyRepository : ReadOnlyBaseRepository<Vehicle>, IVehicleReadOnlyRepository
+    public class ClientReadOnlyRepository : ReadOnlyBaseRepository<Client>, IClientReadOnlyRepository
     {
-        public VehicleReadOnlyRepository(VehicleContext context) : base(context)
+        public ClientReadOnlyRepository(AuthContext context) : base(context)
         {
-        }        
+
+        }
     }
 }

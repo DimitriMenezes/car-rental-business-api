@@ -1,4 +1,4 @@
-﻿using Car.Rental.Business.Domain.Entities.Vehicle;
+﻿using Car.Rental.Business.Domain.Entities.Vehicles;
 using System;
 using System.Collections.Generic;
 using System.Text;
