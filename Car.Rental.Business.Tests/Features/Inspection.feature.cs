@@ -70,13 +70,13 @@ namespace Car.Rental.Business.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Inspection without any problems", SourceLine=3)]
+        [TechTalk.SpecRun.ScenarioAttribute("Inspection without any problems", SourceLine=2)]
         public virtual void InspectionWithoutAnyProblems()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Inspection without any problems", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+#line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -97,24 +97,24 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
-                            "id",
-                            "name",
-                            "cpf"});
+                            "Id",
+                            "Name",
+                            "Cpf"});
                 table1.AddRow(new string[] {
                             "2",
                             "Maria",
                             "46590052085"});
-#line 5
+#line 4
  testRunner.Given("that user is registred as following", ((string)(null)), table1, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "id",
-                            "mark",
-                            "model",
-                            "plate",
-                            "year",
-                            "trunkCapacity",
-                            "hourlyRate"});
+                            "Id",
+                            "Mark",
+                            "Model",
+                            "Plate",
+                            "Year",
+                            "TrunkCapacity",
+                            "HourlyRate"});
                 table2.AddRow(new string[] {
                             "3",
                             "Chevrolet",
@@ -123,59 +123,59 @@ this.ScenarioInitialize(scenarioInfo);
                             "2011",
                             "500",
                             "5.0"});
-#line 8
+#line 7
  testRunner.And("the following vehicle is available", ((string)(null)), table2, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
-                            "vehicleId",
-                            "userId",
-                            "starDate",
-                            "endDate",
-                            "totalPrix"});
+                            "VehicleId",
+                            "ClientId",
+                            "StartDate",
+                            "EndDate",
+                            "TotalPrix"});
                 table3.AddRow(new string[] {
-                            "1",
-                            "1",
+                            "3",
+                            "2",
                             "2022-01-01 16:00",
-                            "2022-01-03 18:00",
-                            "250.00"});
-#line 11
+                            "2022-01-03 22:00",
+                            "270.00"});
+#line 10
  testRunner.And("a reservation was made", ((string)(null)), table3, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "vehicleId",
                             "operatorId",
-                            "hasDamages",
-                            "hasScratches",
-                            "fuelFilled",
-                            "carCleaned"});
+                            "HasDamages",
+                            "HasScratches",
+                            "FuelFilled",
+                            "VehicleClean"});
                 table4.AddRow(new string[] {
-                            "1",
+                            "3",
                             "1",
                             "false",
                             "false",
                             "true",
                             "true"});
-#line 14
+#line 13
  testRunner.When("I make the inspection", ((string)(null)), table4, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "totalPrix"});
                 table5.AddRow(new string[] {
-                            "250.00"});
-#line 17
+                            "270.00"});
+#line 16
  testRunner.Then("the reservation total prix will be", ((string)(null)), table5, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Inspection with some problems", SourceLine=20)]
+        [TechTalk.SpecRun.ScenarioAttribute("Inspection with some problems", SourceLine=19)]
         public virtual void InspectionWithSomeProblems()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Inspection with some problems", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 21
+#line 20
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -196,24 +196,24 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
                 TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
-                            "id",
-                            "name",
-                            "cpf"});
+                            "Id",
+                            "Name",
+                            "Cpf"});
                 table6.AddRow(new string[] {
                             "3",
                             "Jose",
                             "46590052085"});
-#line 22
+#line 21
  testRunner.Given("that user is registred as following", ((string)(null)), table6, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
-                            "id",
-                            "mark",
-                            "model",
-                            "plate",
-                            "year",
-                            "trunkCapacity",
-                            "hourlyRate"});
+                            "Id",
+                            "Mark",
+                            "Model",
+                            "Plate",
+                            "Year",
+                            "TrunkCapacity",
+                            "HourlyRate"});
                 table7.AddRow(new string[] {
                             "4",
                             "Chevrolet",
@@ -222,46 +222,46 @@ this.ScenarioInitialize(scenarioInfo);
                             "2012",
                             "500",
                             "5.0"});
-#line 25
+#line 24
  testRunner.And("the following vehicle is available", ((string)(null)), table7, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
-                            "vehicleId",
-                            "userId",
-                            "starDate",
-                            "endDate",
-                            "totalPrix"});
+                            "VehicleId",
+                            "ClientId",
+                            "StartDate",
+                            "EndDate",
+                            "TotalPrix"});
                 table8.AddRow(new string[] {
-                            "3",
                             "4",
+                            "3",
                             "2022-01-01 16:00",
-                            "2022-01-03 18:00",
-                            "250.00"});
-#line 28
+                            "2022-01-03 22:00",
+                            "270.00"});
+#line 27
  testRunner.And("a reservation was made", ((string)(null)), table8, "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
-                            "vehicleId",
-                            "operatorId",
-                            "hasDamages",
-                            "hasScratches",
-                            "fuelFilled",
-                            "carCleaned"});
+                            "VehicleId",
+                            "OperatorId",
+                            "HasDamages",
+                            "HasScratches",
+                            "FuelFilled",
+                            "VehicleClean"});
                 table9.AddRow(new string[] {
-                            "1",
+                            "4",
                             "1",
                             "false",
                             "true",
                             "true",
                             "false"});
-#line 31
+#line 30
  testRunner.When("I make the inspection", ((string)(null)), table9, "When ");
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "totalPrix"});
                 table10.AddRow(new string[] {
-                            "422.50"});
-#line 34
+                            "456.300"});
+#line 33
  testRunner.Then("the reservation total prix will be", ((string)(null)), table10, "Then ");
 #line hidden
             }

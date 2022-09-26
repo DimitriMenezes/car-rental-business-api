@@ -19,7 +19,7 @@ namespace Car.Rental.Business.Tests.Data
         public BusinessContext BusinessContext { get; set; }
         public IRentalSimulationService _simulationService { get; set; }
         public IReservationService _reservationService { get; set; }
-        
+        public IInspectionService _inspectionService { get; set; }
 
 
         public Fixture()
@@ -29,7 +29,7 @@ namespace Car.Rental.Business.Tests.Data
                     .Options;
 
             VehicleContext = new VehicleContext(options);
-            
+
 
             var businesseDbOptions = new DbContextOptionsBuilder<BusinessContext>()
                     .UseInMemoryDatabase("BusinessDb")
@@ -50,13 +50,15 @@ namespace Car.Rental.Business.Tests.Data
             });
 
             IMapper mapper = mappingConfig.CreateMapper();
-            
+
             _reservationService = new ReservationService(reservationRepository, vehicleRepository, mapper);
+
+            _inspectionService = new InspectionService(inspectionRepository, reservationRepository, mapper);
         }
 
         public void Dispose()
         {
-            VehicleContext.Dispose();            
+            VehicleContext.Dispose();
         }
     }
 }

@@ -42,7 +42,7 @@ namespace Car.Rental.Business.Services.Concrete
             if (vehicle == null)
                 return new ReturnModel { Errors = "Vehicle not found" };
 
-            var oldReservation = await _reservationRepository.GetById(model.ReservationId);
+            var oldReservation = await _reservationRepository.GetById(model.Id);
             if(oldReservation == null)
                 return new ReturnModel { Errors = "Reservation not found" };
             
@@ -69,7 +69,7 @@ namespace Car.Rental.Business.Services.Concrete
 
         public async Task<ReturnModel> GetReservation(int id)
         {
-            return new ReturnModel { Data = _mapper.Map<Reservation>(await _reservationRepository.GetById(id)) };
+            return new ReturnModel { Data = _mapper.Map<ReservationModel>(await _reservationRepository.GetById(id)) };
         } 
         
         private decimal PrixCalc(DateTime startDate, DateTime endDate, decimal hourlyRate)

@@ -6,7 +6,7 @@ namespace Car.Rental.Business.Services.Model
 {
     public class ReservationModel
     {
-        public int ReservationId { get; set; }
+        public int Id { get; set; }
         public int ClientId { get; set; }
         public int VehicleId { get; set; }
         public DateTime StartDate { get; set; }
