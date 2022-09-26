@@ -33,7 +33,7 @@ namespace Car.Rental.Business.Services.Concrete
 
             await _reservationRepository.Insert(reservation);
 
-            return new ReturnModel { Data = _mapper.Map<Reservation>(reservation) };
+            return new ReturnModel { Data = _mapper.Map<ReservationModel>(reservation) };
         }      
 
         public async Task<ReturnModel> UpdateReservation(ReservationModel model)
