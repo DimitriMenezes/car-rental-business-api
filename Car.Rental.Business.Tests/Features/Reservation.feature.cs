@@ -149,7 +149,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "2",
                             "1",
                             "2022-01-01 16:00",
-                            "2022-01-03 18:00",
+                            "2022-01-03 22:00",
                             "270.00"});
 #line 13
  testRunner.Then("the following reservation will be saved", ((string)(null)), table14, "Then ");

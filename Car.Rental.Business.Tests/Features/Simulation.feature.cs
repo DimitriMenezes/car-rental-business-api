@@ -70,13 +70,13 @@ namespace Car.Rental.Business.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Car Rental Simulation", SourceLine=3)]
+        [TechTalk.SpecRun.ScenarioAttribute("Car Rental Simulation", SourceLine=2)]
         public virtual void CarRentalSimulation()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Car Rental Simulation", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
-#line 4
+#line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             bool isScenarioIgnored = default(bool);
@@ -112,7 +112,7 @@ this.ScenarioInitialize(scenarioInfo);
                             "2012",
                             "500",
                             "5.0"});
-#line 5
+#line 4
  testRunner.Given("the following vehicle is available", ((string)(null)), table15, "Given ");
 #line hidden
                 TechTalk.SpecFlow.Table table16 = new TechTalk.SpecFlow.Table(new string[] {
@@ -123,10 +123,10 @@ this.ScenarioInitialize(scenarioInfo);
                             "1",
                             "2022-01-01 16:00",
                             "2022-01-03 22:00"});
-#line 8
+#line 7
  testRunner.When("I make a simulation for this vehicle", ((string)(null)), table16, "When ");
 #line hidden
-#line 11
+#line 10
  testRunner.Then("the result will be \"270.00\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

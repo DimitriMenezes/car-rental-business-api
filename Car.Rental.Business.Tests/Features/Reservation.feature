@@ -12,4 +12,4 @@ Scenario: Reservation sucessfully
 		| 2         | 1        | 2022-01-01 16:00 | 2022-01-03 22:00 |
 	Then the following reservation will be saved
 		| VehicleId | ClientId | StartDate        | EndDate          | TotalPrix |
-		| 2         | 1        | 2022-01-01 16:00 | 2022-01-03 18:00 | 270.00    |
+		| 2         | 1        | 2022-01-01 16:00 | 2022-01-03 22:00 | 270.00    |
