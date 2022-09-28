@@ -43,11 +43,11 @@ namespace Car.Rental.BusinessAPI
                 x => x.MigrationsHistoryTable("__EFMigrationsHistory", "business"))
                 .UseLoggerFactory(LoggerFactory.Create(builder => builder.AddConsole())));
 
-            //services.AddDbContext<AuthContext>(options => options.UseSqlServer(configuration));
+            services.AddDbContext<AuthContext>(options => options.UseSqlServer(configuration));
             services.AddDbContext<VehicleContext>(options => options.UseSqlServer(configuration));
 
             services.AddScoped<DbContext, BusinessContext>();
-            //services.AddScoped<DbContext, AuthContext>();
+            services.AddScoped<DbContext, AuthContext>();
             services.AddScoped<DbContext, VehicleContext>();
 
             ApplicationInjector.RegisterServices(services);

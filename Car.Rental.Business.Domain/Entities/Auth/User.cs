@@ -9,5 +9,7 @@ namespace Car.Rental.Business.Domain.Entities.Auth
     public class User : Base
     {
         public string Name { get; set; }
+        public string Cpf { get; set; }
+        public string EnrollmentCode { get; set; }
     }
 }

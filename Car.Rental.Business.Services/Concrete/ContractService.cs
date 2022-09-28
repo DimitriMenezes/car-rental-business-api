@@ -14,11 +14,14 @@ namespace Car.Rental.Business.Services.Concrete
     {
 		private readonly IReservationRepository _reservationRepository;
 		private readonly IVehicleReadOnlyRepository _vehicleReadOnlyRepository;
+		private readonly IClientReadOnlyRepository _clientReadOnlyRepository;
 		private IConverter _converter;
-		public ContractService(IReservationRepository reservationRepository, IVehicleReadOnlyRepository vehicleReadOnlyRepository, IConverter converter)
+		public ContractService(IReservationRepository reservationRepository, IVehicleReadOnlyRepository vehicleReadOnlyRepository,
+			IClientReadOnlyRepository clientReadOnlyRepository, IConverter converter)
         {
 			_reservationRepository = reservationRepository;
 			_vehicleReadOnlyRepository = vehicleReadOnlyRepository;
+			_clientReadOnlyRepository = clientReadOnlyRepository;
 			_converter = converter;
 		}
 
@@ -26,16 +29,17 @@ namespace Car.Rental.Business.Services.Concrete
         {
 			var reservation = await _reservationRepository.GetById(reservationId);
 			var vehicle = await _vehicleReadOnlyRepository.GetById(reservation.VehicleId);
+			var client = await _clientReadOnlyRepository.GetById(reservation.ClientId);
 
 			var contractModel = new ContractModel
 			{
-				ClientCpf = "123456789",
-				ClientName = "Dimitri Carvalho",
+				ClientCpf = client.Cpf,
+				ClientName = client.Name,
 				CurrentDate = DateTime.Now,
-				Mark = "Ford",
-				Model = "Fiesta",
-				Plate = "JBL123",
-				Year = 2015
+				Mark = vehicle.Mark.Name,
+				Model = vehicle.Model.Name,
+				Plate = vehicle.LicensePlate,
+				Year = vehicle.Year
 			};
 
 			var html = GetHTMLString(contractModel);

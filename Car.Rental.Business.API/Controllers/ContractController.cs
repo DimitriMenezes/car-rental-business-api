@@ -34,7 +34,7 @@ namespace Car.Rental.Business.API.Controllers
             }
             catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
     }

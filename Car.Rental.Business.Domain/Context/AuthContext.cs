@@ -5,8 +5,7 @@ namespace Car.Rental.Business.Domain.Context
 {
     public partial class AuthContext : DbContext
     {
-        //public DbSet<Client> Client { get; }
-        //public DbSet<Operator> Operator { get; }
+        public DbSet<User> User { get; set; }        
 
         public AuthContext()
         {

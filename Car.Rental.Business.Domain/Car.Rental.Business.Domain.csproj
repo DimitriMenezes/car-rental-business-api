@@ -5,15 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Context\AuthContext.cs" />
     <Compile Remove="EntitiesMapping\CategoryMapping.cs" />
     <Compile Remove="EntitiesMapping\FuelTypeMapping.cs" />
     <Compile Remove="EntitiesMapping\MarkMapping.cs" />
     <Compile Remove="EntitiesMapping\ModelMapping.cs" />
     <Compile Remove="EntitiesMapping\VehicleMapping.cs" />
-    <Compile Remove="Entities\Auth\Client.cs" />
-    <Compile Remove="Entities\Auth\Operator.cs" />
-    <Compile Remove="Entities\Auth\User.cs" />
     <Compile Remove="Migrations\20220924132734_InitialCreate.cs" />
     <Compile Remove="Migrations\20220924132734_InitialCreate.Designer.cs" />
     <Compile Remove="Migrations\20220925190711_InitialCreate.cs" />
@@ -23,10 +19,6 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.9" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.9" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Entities\Auth\" />
   </ItemGroup>
 
 </Project>

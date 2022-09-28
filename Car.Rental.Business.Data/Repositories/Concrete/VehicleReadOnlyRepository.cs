@@ -13,6 +13,13 @@ namespace Car.Rental.Business.Data.Repositories.Concrete
     {
         public VehicleReadOnlyRepository(VehicleContext context) : base(context)
         {
-        }        
+        }
+        
+        public override async Task<Vehicle> GetById(int id)
+        {
+            return await _dbSet.Include(i => i.Mark)
+                .Include(i => i.Model)
+                .FirstOrDefaultAsync(i => i.Id == id);
+        }
     }
 }
